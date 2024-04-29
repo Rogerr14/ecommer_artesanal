@@ -12,6 +12,42 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return LayoutWidget();
+    bool isActive = false;
+    return LayoutWidget(
+      isActive: isActive,
+      child: 
+      Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 300,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(30)  
+
+                  ),
+                  child: Column(
+                    children: [
+                      Text('Producto A'),
+                      OutlinedButton(onPressed: (){
+                       isActive = true;
+                     
+                      }, child: Icon(Icons.shopping_cart))
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 120,)
+        ],
+      )
+    );
   }
 }
