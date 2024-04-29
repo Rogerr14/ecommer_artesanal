@@ -66,8 +66,7 @@ class FooterWidget extends StatelessWidget {
         color:  Colors.amber
       ),
       child: Row(children: [
-        SizedBox(width: 20,),
-        Text('Todos los derechos reservados ')
+                Text('Todos los derechos reservados ')
       ],),
     );
   }

@@ -36,8 +36,10 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Text('Producto A'),
                       OutlinedButton(onPressed: (){
+                        setState(() {
                        isActive = true;
-                     
+                          
+                        });
                       }, child: Icon(Icons.shopping_cart))
                     ],
                   ),
